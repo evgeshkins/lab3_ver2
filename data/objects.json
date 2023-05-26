@@ -1,0 +1,32 @@
+[
+    {
+      "id": 1,
+      "img": "https://obj.altapress.ru/picture/724211/936x.jpg",
+      "name": "Истиннобархатные",
+      "description": "Для истинных любителей бархатного делового стиля."
+    },
+    {
+      "id": 2,
+      "img": "https://avatars.yandex.net/get-music-content/6386858/4d22a1f1.a.25178271-1/m1000x1000",
+      "name": "Царские",
+      "description": "Царям - царские тяги"
+    },
+    {
+      "id": 3,
+      "img": "https://i.mycdn.me/getVideoPreview?id=3821495716376&idx=9&type=39&tkn=ZRN70tQ1Rt2EwFMyJYJFFo1gAPI&fn=vid_x",
+      "name": "Планктонские",
+      "description": "Лютые тяги для каждого планктона"
+    },
+    {
+      "id": 4,
+      "img": "https://obj.altapress.ru/picture/724228/900x.jpg",
+      "name": "Спортивно-деловые",
+      "description": "И на свидание, и на марафон"
+    },
+    {
+      "id": 5,
+      "img": "https://obj.altapress.ru/picture/724214/900x.jpg",
+      "name": "Добренькие",
+      "description": "Добротные, мягкие, экологичные"
+    }]
+  
