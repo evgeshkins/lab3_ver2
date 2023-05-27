@@ -12044,26 +12044,12 @@ footer {
   margin: 20px 0;
 }
 
-.signature {
+.centered {
   text-align: center;
 }
 
 .last-logo {
   width: 50px;
-}
-
-.my-name {
-  text-align: center;
-  justify-content: center;
-  margin-left: 10px;
-}
-
-.icons {
-  width: 50px;
-}
-
-base {
-  margin: 5px;
 }
 
 .last-line {

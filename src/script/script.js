@@ -47,7 +47,7 @@ $('#toastbtn').on('click', () => {
 
 
 
-import data from '../../data/objects.json';
+import data from '../../data/data.json';
 import template1 from '../_shared/_components/cards.hbs';
 
 const objects = [];

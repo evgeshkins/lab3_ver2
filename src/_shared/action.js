@@ -3,7 +3,7 @@ import template2 from './_components/footer.hbs';
 import template3 from './_components/header.hbs';
 import template4 from './_components/modal.hbs';
 import template5 from './_components/modal_new.hbs';
-import objects from '../../data/objects.json';
+import objects from '../../data/data.json';
 
 const loader = () => {
   let html = template1({objects});
