@@ -69,10 +69,10 @@ saveNewButton.addEventListener('click', (event) => {
      alert("Требуется заполнить все поля!");
      return;
    }
-   else if (/^\d/.test(newimg)) {
-     alert("Название данного поля не может начинаться с цифры!");
-     return;
-   }
+   else if (/^\d/.test(newimg) || /^\d/.test(newName) || /^\d/.test(newDescription)) {
+    alert("Название данного поля не может начинаться с цифры!");
+    return;
+  }
 
   const newObject = {
     id: objects.length + 1,
@@ -103,7 +103,7 @@ saveButton.addEventListener('click', (event) => {
     alert("Требуется заполнить все поля!");
     return;
   }
-  else if (/^\d/.test(newimg)) {
+  else if (/^\d/.test(newimg) || /^\d/.test(newName) || /^\d/.test(newDescription)) {
     alert("Название данного поля не может начинаться с цифры!");
     return;
   }
