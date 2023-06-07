@@ -36,8 +36,12 @@ $(document).ready(() => {
     }
   });
   const loadButton = $('#toastbtn');
+console.log(loadButton);
+console.log("Длина");
 console.log($(document).find('#new-card-modal').length);
 const newCardModal = new bootstrap.Modal($('#new-card-modal'));
+console.log($('#new-card-modal'));
+console.log("Hello");
 
 const newCardForm = $('#new-card-form')[0];
 const saveNewButton = $('#save-new-button')[0];
@@ -66,13 +70,13 @@ saveNewButton.addEventListener('click', (event) => {
   const newDescription = $('#new-description').val();
 
   if (!newimg || !newName || !newDescription) {
-    alert("Заполните все поля формы!");
-    return;
-    }
-    else if (/^\d/.test(newimg) || /^\d/.test(newName)) {
-    alert("Название не может начинаться с цифры!");
-    return;
-    }  
+     alert("Заполните все поля формы!");
+     return;
+   }
+   else if (/^\d/.test(newimg) || /^\d/.test(newName)) {
+     alert("Название не может начинаться с цифры!");
+     return;
+   }
 
   const newObject = {
     id: objects.length + 1,
@@ -102,11 +106,11 @@ saveButton.addEventListener('click', (event) => {
   if (!newimg || !newName || !newDescription) {
     alert("Заполните все поля формы!");
     return;
-    }
-    else if (/^\d/.test(newimg) || /^\d/.test(newName)) {
+  }
+  else if (/^\d/.test(newimg) || /^\d/.test(newName)) {
     alert("Название не может начинаться с цифры!");
     return;
-    }
+  }
 
   const id = $('#modal').attr('current-item');
   const elements = id.split('-').slice(1) - 1;
@@ -118,10 +122,3 @@ saveButton.addEventListener('click', (event) => {
   app.innerHTML = html;
 });
 });
-
-
-
-
-
-
-

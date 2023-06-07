@@ -53,7 +53,6 @@ const render = (info) => {
   html = template5();
   app = document.getElementById('new_modal');
   app.innerHTML = html;
-  console.log("мы тут");
 };
 
 
