@@ -1,5 +1,11 @@
 import $ from 'jquery';
+import * as bootstrap from 'bootstrap';
 import { initTooltips, fillModal, navigateCards } from './utils';
+import data from '../../data/data.json';
+import template1 from '../_shared/_components/cards.hbs';
+
+
+console.log("Мы зашли в script.js");
 
 $(document).ready(() => {
   initTooltips();
@@ -30,25 +36,24 @@ $(document).ready(() => {
       fillModal(modal, $(document).find(`#${nextSlide}`));
     }
   });
-});
+  const loadButton = $('#toastbtn');
+console.log(loadButton);
+console.log("Длина");
+console.log($(document).find('#new-card-modal').length);
+const newCardModal = new bootstrap.Modal($('#new-card-modal'));
+console.log($('#new-card-modal'));
+console.log("Hello");
 
-
-
-const loadButton = $('#toastbtn')[0];
-const newCardModal = new bootstrap.Modal($('#new-card-modal')[0]);
 const newCardForm = $('#new-card-form')[0];
 const saveNewButton = $('#save-new-button')[0];
 const saveButton = $('#save-button')[0];
 
 $('#toastbtn').on('click', () => {
   $('#new-img, #new-name, #new-description').val('');
+
   newCardModal.show();
 });
 
-
-
-import data from '../../data/data.json';
-import template1 from '../_shared/_components/cards.hbs';
 
 const objects = [];
 objects.push(...data);
@@ -65,14 +70,14 @@ saveNewButton.addEventListener('click', (event) => {
   const newName = $('#new-name').val();
   const newDescription = $('#new-description').val();
 
-   if (!newimg || !newName || !newDescription) {
-     alert("Требуется заполнить все поля!");
-     return;
-   }
-   else if (/^\d/.test(newimg) || /^\d/.test(newName) || /^\d/.test(newDescription)) {
-    alert("Название данного поля не может начинаться с цифры!");
-    return;
-  }
+  // if (!newimg || !newName) {
+  //   alert("Заполните все поля формы!");
+  //   return;
+  // }
+  // else if (/^\d/.test(newimg)) {
+  //   alert("Название не может начинаться с цифры!");
+  //   return;
+  // }
 
   const newObject = {
     id: objects.length + 1,
@@ -99,14 +104,14 @@ saveButton.addEventListener('click', (event) => {
   const newName = $('#name').val();
   const newDescription = $('#description').val();
 
-  if (!newimg || !newName || !newDescription) {
-    alert("Требуется заполнить все поля!");
-    return;
-  }
-  else if (/^\d/.test(newimg) || /^\d/.test(newName) || /^\d/.test(newDescription)) {
-    alert("Название данного поля не может начинаться с цифры!");
-    return;
-  }
+  // if (!newimg || !newName) {
+  //   alert("Заполните все поля формы!");
+  //   return;
+  // }
+  // else if (/^\d/.test(newimg)) {
+  //   alert("Название не может начинаться с цифры!");
+  //   return;
+  // }
 
   const id = $('#modal').attr('current-item');
   const elements = id.split('-').slice(1) - 1;
@@ -117,6 +122,10 @@ saveButton.addEventListener('click', (event) => {
   let app = document.getElementById('cards');
   app.innerHTML = html;
 });
+});
+
+
+
 
 
 

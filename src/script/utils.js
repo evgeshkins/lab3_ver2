@@ -1,5 +1,5 @@
 import $ from 'jquery';
-window.bootstrap = require('bootstrap/dist/js/bootstrap.js');
+import * as bootstrap from 'bootstrap';
 
 export const initTooltips = () => {
   var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
