@@ -1,7 +1,7 @@
 import Handlebars from 'handlebars';
 import template1 from "./_shared/_components/cards.hbs";
-import template3 from "./_shared/_components/header.hbs";
 import template2 from "./_shared/_components/footer.hbs";
+import template3 from "./_shared/_components/header.hbs";
 import template4 from "./_shared/_components/modal.hbs";
 import template5 from "./_shared/_components/modal_new.hbs";
 
@@ -13,7 +13,7 @@ xhttp_select.addEventListener('readystatechange', function(){
         console.log(xhttp_select.response);
         console.log("событие сработало");
 
-        // распарсили ответ от сервера, т.е распарсим файл JSON
+        // обработали ответ от сервера из JSON
         let response = JSON.parse(xhttp_select.response);
 
         render(response);

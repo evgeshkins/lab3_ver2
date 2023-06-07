@@ -70,14 +70,14 @@ saveNewButton.addEventListener('click', (event) => {
   const newName = $('#new-name').val();
   const newDescription = $('#new-description').val();
 
-  // if (!newimg || !newName) {
-  //   alert("Заполните все поля формы!");
-  //   return;
-  // }
-  // else if (/^\d/.test(newimg)) {
-  //   alert("Название не может начинаться с цифры!");
-  //   return;
-  // }
+  if (!newimg || !newName || !newDescription) {
+    alert("Заполните все поля формы!");
+    return;
+    }
+    else if (/^\d/.test(newimg) || /^\d/.test(newName)) {
+    alert("Название не может начинаться с цифры!");
+    return;
+    }
 
   const newObject = {
     id: objects.length + 1,
@@ -104,14 +104,14 @@ saveButton.addEventListener('click', (event) => {
   const newName = $('#name').val();
   const newDescription = $('#description').val();
 
-  // if (!newimg || !newName) {
-  //   alert("Заполните все поля формы!");
-  //   return;
-  // }
-  // else if (/^\d/.test(newimg)) {
-  //   alert("Название не может начинаться с цифры!");
-  //   return;
-  // }
+  if (!newimg || !newName || !newDescription) {
+    alert("Заполните все поля формы!");
+    return;
+    }
+    else if (/^\d/.test(newimg) || /^\d/.test(newName)) {
+    alert("Название не может начинаться с цифры!");
+    return;
+    }
 
   const id = $('#modal').attr('current-item');
   const elements = id.split('-').slice(1) - 1;
